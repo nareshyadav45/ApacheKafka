@@ -1,0 +1,25 @@
+package com.kafka.consumer;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.kafka.annotation.KafkaListener;
+
+import com.kafka.consumer.Entity.Customer;
+import com.kafka.consumer.util.KafkaConstants;
+
+import lombok.extern.slf4j.Slf4j;
+
+@SpringBootApplication
+@Slf4j
+public class Application {
+
+	public static void main(String[] args) {
+		SpringApplication.run(Application.class, args);
+	}
+	@KafkaListener(topics = KafkaConstants.TOPIC,groupId = KafkaConstants.GROUP_ID)
+	public Customer listner(Customer customer) {
+		log.info("Messagae received from kafka "+ customer);
+		return customer;
+	}
+
+}

@@ -1,0 +1,5 @@
+package com.kafka.consumer.Entity;
+
+public class Customer {
+
+}

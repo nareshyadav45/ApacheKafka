@@ -1,0 +1,24 @@
+package com.kafka.consumer.service;
+
+
+
+import org.springframework.kafka.annotation.KafkaListener;
+import org.springframework.stereotype.Service;
+
+import com.kafka.consumer.Entity.Customer;
+import com.kafka.consumer.util.KafkaConstants;
+
+import lombok.extern.slf4j.Slf4j;
+
+@Service
+@Slf4j
+public class CustomerService {
+
+//	@KafkaListener(topics = KafkaConstants.TOPIC,groupId = KafkaConstants.GROUP_ID)
+//	public void listner(Customer customer) {
+//		log.info("Messagae received from kafka "+ customer);
+//		System.out.println("customer data   "+ customer);
+//		//return customer;
+//	}
+	
+}
